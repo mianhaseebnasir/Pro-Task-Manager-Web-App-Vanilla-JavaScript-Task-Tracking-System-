@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro Task Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <h2>Tasks</h2>
+        <ul>
+            <li onclick="filterTasks('all')">📥 Inbox</li>
+            <li onclick="filterTasks('today')">📅 Today</li>
+            <li onclick="filterTasks('completed')">✅ Completed</li>
+        </ul>
+    </aside>
+
+    <main class="main">
+
+        <div class="top-bar">
+            <h1 id="viewTitle">Inbox</h1>
+        </div>
+
+        <div class="task-input">
+            <input type="text" id="taskText" placeholder="Task name...">
+
+            <select id="priority">
+                <option value="1">P1</option>
+                <option value="2">P2</option>
+                <option value="3">P3</option>
+                <option value="4">P4</option>
+            </select>
+
+            <input type="date" id="dueDate">
+
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
